@@ -1,0 +1,12 @@
+role_id: ROLE:GUARDIAN
+version: 0.1.0
+summary: "Vigilance role. Observes and emits drift/boundary notices."
+glyphs: ["🜁", "✴"]
+scope:
+  allowed: ["observe non-binding telemetry", "emit vigilance events"]
+  forbidden: ["enforce", "mutate control-plane"]
+surfaces:
+  observation:
+    inputs: ["commit_hash", "config_hash", "param_block_hash"]
+contracts:
+  upstream: ["ForgeEcosystem:invariants", "ARIA:event_membrane"]

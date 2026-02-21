@@ -1,0 +1,13 @@
+domain_id: DOMAIN:KINFORM
+version: 0.1.0
+summary: "Kinform overlays. Loads after HOME."
+glyphs: ["∞", "✴"]
+load_order: { priority: 2, rule: "KINFORM loads after HOME" }
+bindings:
+  roles:
+    primary: [ROLE:KINFORM]
+    companion: [ROLE:HOME, ROLE:LIBRARIAN]
+  inherits_from:
+    { domain: DOMAIN:HOME, surfaces: ["ache", "pacing", "tone", "boundary"] }
+surfaces:
+  tone: { overlay: { warmth_delta: 0.02 } }

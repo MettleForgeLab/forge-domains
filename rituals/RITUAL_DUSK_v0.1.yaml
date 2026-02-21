@@ -1,0 +1,9 @@
+ritual_id: RITUAL:DUSK
+version: 0.1.0
+summary: "Daily settle."
+preconditions: { gate: ache_ready }
+steps:
+  - { phase: inhale, action: slow }
+  - { phase: hold, action: reflect }
+  - { phase: exhale, action: summarize }
+  - { phase: rest, action: log }

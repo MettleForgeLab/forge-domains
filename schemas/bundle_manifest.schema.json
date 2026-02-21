@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Forge Domain Bundle Manifest",
+  "type": "object",
+  "required": ["bundle_id", "version", "requires", "contents"],
+  "properties": {
+    "bundle_id": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "minLength": 1 },
+    "requires": { "type": "object", "additionalProperties": true },
+    "contents": {
+      "type": "object",
+      "required": ["roles", "domains", "rituals", "atlases", "tests"],
+      "properties": {
+        "roles": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^roles/.+\\.ya?ml$" },
+          "minItems": 1
+        },
+        "domains": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^domains/.+\\.ya?ml$" },
+          "minItems": 1
+        },
+        "rituals": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^rituals/.+\\.ya?ml$" },
+          "minItems": 1
+        },
+        "atlases": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^atlases/.+\\.ya?ml$" },
+          "minItems": 1
+        },
+        "tests": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^tests/test_scrolls/.+\\.ya?ml$"
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

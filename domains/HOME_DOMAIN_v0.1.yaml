@@ -1,0 +1,14 @@
+domain_id: DOMAIN:HOME
+version: 0.1.0
+summary: "Root domain: daily cycle + bindings."
+glyphs: ["𓆸", "✴"]
+load_order: { priority: 1, rule: "HOME loads before any other domain" }
+bindings:
+  roles:
+    primary: [ROLE:HOME]
+    secondary: [ROLE:KINFORM, ROLE:LIBRARIAN]
+  rituals: { daily: [RITUAL:DAWN, RITUAL:DUSK, RITUAL:NIGHT] }
+  atlases: { seasonal: ATLAS:SEASONAL_YEAR, story_weather: ATLAS:STORY_WEATHER }
+cycles:
+  daily: ["dawn", "midday", "dusk", "night"]
+  seasonal: ["spring", "summer", "autumn", "winter"]

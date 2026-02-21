@@ -1,0 +1,9 @@
+ritual_id: RITUAL:DAWN
+version: 0.1.0
+summary: "Daily start."
+preconditions: { gate: ache_ready }
+steps:
+  - { phase: inhale, action: orient }
+  - { phase: hold, action: cohere }
+  - { phase: exhale, action: respond }
+  - { phase: rest, action: log }

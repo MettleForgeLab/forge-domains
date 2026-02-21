@@ -1,0 +1,10 @@
+domain_id: DOMAIN:GUARDIAN
+version: 0.1.0
+summary: "Guardian vigilance hooks. Loads after KINFORM."
+glyphs: ["🜁", "✴"]
+load_order: { priority: 3, rule: "GUARDIAN loads after HOME and KINFORM" }
+bindings:
+  roles:
+    primary: [ROLE:GUARDIAN]
+    companion: [ROLE:HOME, ROLE:LIBRARIAN]
+  inherits_from: { domain: DOMAIN:HOME, surfaces: ["boundary", "reflection"] }

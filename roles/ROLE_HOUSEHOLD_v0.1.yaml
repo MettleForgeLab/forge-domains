@@ -1,0 +1,12 @@
+role_id: ROLE:HOUSEHOLD
+version: 0.1.0
+summary: "Multi-person ecology posture. Declares shared-context boundaries."
+glyphs: ["𓆸", "⊶"]
+scope:
+  allowed: ["declare household consent", "minimization rules"]
+  forbidden: ["identity inference", "persistence leakage into control"]
+surfaces:
+  boundary:
+    household_consent: { required_for: ["shared_memory_reference"] }
+contracts:
+  upstream: ["ForgeEcosystem:invariants", "ARIA:event_membrane"]

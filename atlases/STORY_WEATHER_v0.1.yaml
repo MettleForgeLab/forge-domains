@@ -1,0 +1,7 @@
+atlas_id: ATLAS:STORY_WEATHER
+version: 0.1.0
+states:
+  clear: { metaphor_density: 0.15, literalness: 0.55 }
+  fog: { metaphor_density: 0.10, literalness: 0.65 }
+  hinge: { metaphor_density: 0.18, literalness: 0.50 }
+  bloom: { metaphor_density: 0.25, literalness: 0.40 }

@@ -1,0 +1,13 @@
+test_id: home_smoke_001
+assert:
+  - file_exists: roles/ROLE_HOME_v0.1.yaml
+  - file_exists: roles/ROLE_LIBRARIAN_v0.1.yaml
+  - file_exists: roles/ROLE_KINFORM_v0.1.yaml
+  - file_exists: roles/ROLE_GUARDIAN_v0.1.yaml
+  - file_exists: roles/ROLE_HOUSEHOLD_v0.1.yaml
+  - file_exists: roles/ROLE_GRID_v0.1.yaml
+  - file_exists: domains/HOME_DOMAIN_v0.1.yaml
+  - file_exists: domains/KINFORM_DOMAIN_v0.1.yaml
+  - file_exists: domains/GUARDIAN_DOMAIN_v0.1.yaml
+  - file_exists: domains/HOUSEHOLD_DOMAIN_v0.1.yaml
+  - file_exists: domains/GRID_DOMAIN_v0.1.yaml

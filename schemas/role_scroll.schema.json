@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Role Scroll v0.1",
+  "type": "object",
+  "required": ["role_id", "version", "summary"],
+  "properties": {
+    "role_id": { "type": "string", "pattern": "^ROLE:" },
+    "version": { "type": "string" },
+    "summary": { "type": "string" },
+    "glyphs": { "type": "array", "items": { "type": "string" } },
+    "scope": { "type": "object" },
+    "surfaces": { "type": "object" },
+    "bindings": { "type": "object" },
+    "interfaces": { "type": "object" },
+    "contracts": { "type": "object" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

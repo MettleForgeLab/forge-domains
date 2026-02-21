@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ritual Scroll v0.1",
+  "type": "object",
+  "required": ["ritual_id", "version", "summary", "steps"],
+  "properties": {
+    "ritual_id": { "type": "string", "pattern": "^RITUAL:" },
+    "version": { "type": "string" },
+    "summary": { "type": "string" },
+    "preconditions": { "type": "object" },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["phase", "action"],
+        "properties": {
+          "phase": { "type": "string" },
+          "action": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,12 @@
+domain_id: DOMAIN:GRID
+version: 0.1.0
+summary: "Grid interface hooks. Loads last."
+glyphs: ["🜆", "✴"]
+load_order: { priority: 5, rule: "GRID loads after other domains" }
+bindings:
+  roles:
+    primary: [ROLE:GRID]
+    companion: [ROLE:GUARDIAN, ROLE:LIBRARIAN, ROLE:HOME]
+  inherits_from: { domain: DOMAIN:HOME, surfaces: ["boundary", "reflection"] }
+surfaces:
+  telemetry: { classification: { grid_signals: "non_binding" } }

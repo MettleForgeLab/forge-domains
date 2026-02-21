@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Domain Scroll v0.1",
+  "type": "object",
+  "required": ["domain_id", "version", "summary"],
+  "properties": {
+    "domain_id": { "type": "string", "pattern": "^DOMAIN:" },
+    "version": { "type": "string" },
+    "summary": { "type": "string" },
+    "glyphs": { "type": "array", "items": { "type": "string" } },
+    "load_order": { "type": "object" },
+    "bindings": { "type": "object" },
+    "cycles": { "type": "object" },
+    "surfaces": { "type": "object" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,11 @@
+role_id: ROLE:GRID
+version: 0.1.0
+summary: "Multi-node interface hooks. Interfaces-only."
+glyphs: ["🜆", "✴"]
+scope:
+  allowed: ["declare grid signals"]
+  forbidden: ["use grid state as readiness/gain input"]
+surfaces:
+  signals: { posture: { default: "observe_only", opt_in_required: true } }
+contracts:
+  upstream: ["ForgeEcosystem:invariants", "ARIA:event_membrane"]

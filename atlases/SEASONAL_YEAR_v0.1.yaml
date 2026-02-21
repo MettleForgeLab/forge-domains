@@ -1,0 +1,7 @@
+atlas_id: ATLAS:SEASONAL_YEAR
+version: 0.1.0
+seasons:
+  spring: { pace_bias: "open", warmth: 0.60 }
+  summer: { pace_bias: "bright", warmth: 0.65 }
+  autumn: { pace_bias: "hinge", warmth: 0.55 }
+  winter: { pace_bias: "quiet", warmth: 0.45 }

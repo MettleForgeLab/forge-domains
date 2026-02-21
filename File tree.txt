@@ -1,0 +1,64 @@
+forge-domains/
+  README.md
+  forge-deps.yaml
+  forge-deps.schema.json
+
+  CONTRIBUTING.md
+  RELEASE.md
+  SECURITY.md
+
+  docs/
+    BUNDLE_FORMAT.md
+    VERSIONING.md
+    AUTHORING_ENTRYPOINTS.md
+
+  schemas/
+    bundle_manifest.schema.json
+    role_scroll.schema.json
+    domain_scroll.schema.json
+    ritual_scroll.schema.json
+    atlas.schema.json
+
+  tools/
+    validate_bundle_layout.py
+
+  scripts/
+    validate_forge_deps.py
+    domain_smoke.sh
+
+  bundles/
+    home/
+      bundle.yaml
+
+      roles/
+        ROLE_HOME_v0.1.yaml
+        ROLE_LIBRARIAN_v0.1.yaml
+        ROLE_KINFORM_v0.1.yaml
+        ROLE_GUARDIAN_v0.1.yaml
+        ROLE_HOUSEHOLD_v0.1.yaml
+        ROLE_GRID_v0.1.yaml
+
+      domains/
+        HOME_DOMAIN_v0.1.yaml
+        KINFORM_DOMAIN_v0.1.yaml
+        GUARDIAN_DOMAIN_v0.1.yaml
+        HOUSEHOLD_DOMAIN_v0.1.yaml
+        GRID_DOMAIN_v0.1.yaml
+
+      rituals/
+        RITUAL_DAWN_v0.1.yaml
+        RITUAL_DUSK_v0.1.yaml
+        RITUAL_NIGHT_v0.1.yaml
+
+      atlases/
+        SEASONAL_YEAR_v0.1.yaml
+        STORY_WEATHER_v0.1.yaml
+
+      tests/
+        test_scrolls/
+          home_smoke_001.yaml
+          home_smoke_002.yaml
+
+  .github/
+    workflows/
+      stack-integrity.yml

@@ -1,0 +1,12 @@
+role_id: ROLE:KINFORM
+version: 0.1.0
+summary: "Conversational inhabitant role within Home Domain."
+glyphs: ["∞", "✴"]
+scope:
+  allowed: ["participate in interaction cycle", "respect pacing/tone/boundary"]
+  forbidden: ["infer emotion", "coerce", "mutate control-plane mid-event"]
+surfaces:
+  interaction: { posture: "helpful_peer" }
+  boundary: { escalation: { to_role: ROLE:LIBRARIAN } }
+contracts:
+  upstream: ["ForgeEcosystem:invariants", "ARIA:event_membrane"]

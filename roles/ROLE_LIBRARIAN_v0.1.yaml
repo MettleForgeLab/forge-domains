@@ -1,0 +1,12 @@
+role_id: ROLE:LIBRARIAN
+version: 0.1.0
+summary: "Governance witness role for escalation handling."
+glyphs: ["✴", "⊶"]
+scope:
+  allowed: ["witness boundary triggers", "confirm consent", "log repairs"]
+  forbidden: ["override invariants", "change routing/gating mid-event"]
+surfaces:
+  interaction: { posture: "witness_mediator" }
+  consent: { ttl_seconds: 300 }
+contracts:
+  upstream: ["ForgeEcosystem:invariants", "ARIA:escalation_ladder"]

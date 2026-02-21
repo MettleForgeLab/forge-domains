@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atlas v0.1",
+  "type": "object",
+  "required": ["atlas_id", "version"],
+  "properties": {
+    "atlas_id": { "type": "string", "pattern": "^ATLAS:" },
+    "version": { "type": "string" }
+  },
+  "additionalProperties": true
+}

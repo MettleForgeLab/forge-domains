@@ -1,0 +1,52 @@
+manifest_version: 1
+repo:
+  name: forge-domains
+  layer: domains
+  semver: true
+  release_channel: medium
+
+interfaces:
+  exports:
+    - id: domains.bundle-format
+      version: 1
+      path: docs/BUNDLE_FORMAT.md
+    - id: schemas.bundle_manifest
+      version: 1
+      path: schemas/bundle_manifest.schema.json
+    - id: schemas.role_scroll
+      version: 1
+      path: schemas/role_scroll.schema.json
+    - id: schemas.domain_scroll
+      version: 1
+      path: schemas/domain_scroll.schema.json
+    - id: schemas.ritual_scroll
+      version: 1
+      path: schemas/ritual_scroll.schema.json
+    - id: schemas.atlas
+      version: 1
+      path: schemas/atlas.schema.json
+    - id: domains.home.bundle
+      version: 1
+      path: bundles/home/bundle.yaml
+  consumes:
+    - id: schemas.commit_record
+      constraint: ">=1 <2"
+
+deps:
+  upstream:
+    - repo: forgeos-mechanisms
+      ref: "v1.0.0"
+    - repo: BoundedRuntime
+      ref: "v1.0.0"
+
+determinism:
+  required: true
+  profile: content
+  checks:
+    - config_freeze
+    - replay_test
+
+ci:
+  github_actions:
+    workflow: .github/workflows/stack-integrity.yml
+    mode: strict

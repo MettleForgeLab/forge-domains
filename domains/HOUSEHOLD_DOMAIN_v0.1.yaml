@@ -1,0 +1,12 @@
+domain_id: DOMAIN:HOUSEHOLD
+version: 0.1.0
+summary: "Household shared-context boundaries. Loads after GUARDIAN."
+glyphs: ["𓆸", "⊶"]
+load_order: { priority: 4, rule: "HOUSEHOLD loads after HOME/KINFORM/GUARDIAN" }
+bindings:
+  roles:
+    primary: [ROLE:HOUSEHOLD]
+    companion: [ROLE:HOME, ROLE:LIBRARIAN]
+  inherits_from: { domain: DOMAIN:HOME, surfaces: ["boundary", "interaction"] }
+surfaces:
+  persistence: { posture: "quarantine" }

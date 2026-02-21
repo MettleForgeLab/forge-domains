@@ -1,0 +1,9 @@
+ritual_id: RITUAL:NIGHT
+version: 0.1.0
+summary: "Quiet mode."
+preconditions: { gate: ache_ready }
+steps:
+  - { phase: inhale, action: quiet }
+  - { phase: hold, action: minimal }
+  - { phase: exhale, action: short }
+  - { phase: rest, action: log }

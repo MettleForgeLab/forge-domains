@@ -1,0 +1,5 @@
+test_id: home_smoke_002
+assert:
+  - deterministic_hash: bundle.yaml
+  - deterministic_hash: roles/ROLE_HOME_v0.1.yaml
+  - deterministic_hash: domains/HOME_DOMAIN_v0.1.yaml
